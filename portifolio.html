@@ -4,147 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Futurista</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(circle at center, #0f0f0f, #000);
-      color: #00ffe0;
-      overflow-x: hidden;
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(0, 255, 224, 0.1);
-      border-bottom: 2px solid #00ffe0;
-      box-shadow: 0 0 20px #00ffe0;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      text-shadow: 0 0 15px #00ffe0;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid #00ffe0;
-      border-radius: 12px;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: conic-gradient(from 180deg, #00ffe0, transparent, #ff00ff, transparent);
-      animation: rotate 6s linear infinite;
-      z-index: 0;
-      opacity: 0.3;
-    }
-
-    @keyframes rotate {
-      100% { transform: rotate(360deg); }
-    }
-
-    .card h2 {
-      position: relative;
-      z-index: 1;
-      margin-bottom: 1rem;
-      color: #00ffe0;
-      text-shadow: 0 0 10px #00ffe0;
-    }
-
-    .card a {
-      position: relative;
-      z-index: 1;
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      background: #00ffe0;
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
-      transition: background 0.3s ease, transform 0.3s ease;
-      box-shadow: 0 0 15px #00ffe0;
-    }
-
-    .card a:hover {
-      background: #ff00ff;
-      color: #fff;
-      transform: scale(1.1);
-      box-shadow: 0 0 25px #ff00ff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: rgba(0, 255, 224, 0.1);
-      border-top: 2px solid #00ffe0;
-      box-shadow: 0 0 20px #00ffe0;
-      margin-top: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body> 
+
+  
   <header>
-    <h1>🚀  Portfólio do SR. Eudson 🚀</h1>
-    <p>Projetos em JavaScript e HTML com estilo único</p>
+    <h1>🚀 Portfólio do SR. Eudson 🚀</h1>
+    <p>Projetos em JavaScript, HTML e Python</p>
+    <div class="buttons">
+      <button onclick="filtrarProjetos('html')">Projetos HTML</button>
+      <button onclick="filtrarProjetos('js')">Projetos JS</button>
+      <button onclick="filtrarProjetos('python')">Projetos Python</button>
+      <button onclick="filtrarProjetos('todos')">Mostrar Todos</button>
+    </div>
   </header>
 
   <main class="container">
-    <div class="card"><h2>Teste-1</h2><a href="https://eudsonj.github.io/testee/teste.js" target="_blank">Abrir Projeto</a></div>
-    <div class="card"><h2>Teste-2</h2><a href="https://eudsonj.github.io/teste2/teste2.js" target="_blank">Abrir Projeto</a></div>
-    <div class="card"><h2>Teste-3</h2><a href="https://github.com/eudsonj/teste3" target="_blank">Abrir Projeto</a></div>
-    <div class="card"><h2>Teste-HTML</h2><a href="https://eudsonj.github.io/teste.html/teste.html" target="_blank">Abrir Projeto</a></div>
-    <div class="card"><h2>Meu Teste-HTML</h2><a href="https://eudsonj.github.io/teste2.html/teste2.html" target="_blank">Abrir Projeto</a></div>
-    <div class="card"><h2>Notas</h2><a href="https://eudsonj.github.io/notas/notas.js" target="_blank">Abrir Projeto</a></div>
-    <div class="card"><h2>Carro-JS</h2><a href="https://eudsonj.github.io/carro/carro.js" target="_blank">Abrir Projeto</a></div>
+    <div class="card js"><h2>Teste-1</h2><a href="https://eudsonj.github.io/testee/teste.js" target="_blank">Abrir Projeto</a></div>
+    <div class="card js"><h2>Teste-2</h2><a href="https://eudsonj.github.io/teste2/teste2.js" target="_blank">Abrir Projeto</a></div>
+    <div class="card js"><h2>Teste-3</h2><a href="https://github.com/eudsonj/teste3" target="_blank">Abrir Projeto</a></div>
+    <div class="card html"><h2>Teste-HTML</h2><a href="https://eudsonj.github.io/teste.html/teste.html" target="_blank">Abrir Projeto</a></div>
+    <div class="card html"><h2>Meu Teste-HTML</h2><a href="https://eudsonj.github.io/teste2.html/teste2.html" target="_blank">Abrir Projeto</a></div>
+    <div class="card js"><h2>Notas</h2><a href="https://eudsonj.github.io/notas/notas.js" target="_blank">Abrir Projeto</a></div>
+    <div class="card js"><h2>Carro-JS</h2><a href="https://eudsonj.github.io/carro/carro.js" target="_blank">Abrir Projeto</a></div>
+    <div class="card python"><h2>Projeto Python</h2><a href="#" target="_blank">Abrir Projeto</a></div>
   </main>
 
   <footer>
-    <p>© 2026 -para o professor robinsom</p>
+    <p>© 2026 - para o FABULOSO SR. ROBSON </p>
   </footer>
 
-  <script>
-    // Efeito futurista: partículas brilhantes flutuando
-    const body = document.body;
-    for(let i=0; i<40; i++){
-      const star = document.createElement('div');
-      star.style.position = 'fixed';
-      star.style.width = '3px';
-      star.style.height = '3px';
-      star.style.background = '#00ffe0';
-      star.style.borderRadius = '50%';
-      star.style.top = Math.random()*100+'%';
-      star.style.left = Math.random()*100+'%';
-      star.style.opacity = Math.random();
-      star.style.animation = `twinkle ${2+Math.random()*3}s infinite`;
-      body.appendChild(star);
-    }
-
-    const style = document.createElement('style');
-    style.innerHTML = `
-      @keyframes twinkle {
-        0%,100% { opacity: 0.2; transform: scale(0.8); }
-        50% { opacity: 1; transform: scale(1.2); }
-      }
-    `;
-    document.head.appendChild(style);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
