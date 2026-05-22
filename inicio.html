@@ -21,7 +21,6 @@
             padding: 2rem 1.5rem;
         }
 
-        /* container principal com brilho vermelho escuro */
         .main-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -31,10 +30,9 @@
             border: 1px solid #8b1a1a;
             box-shadow: 0 20px 35px -12px rgba(180, 0, 0, 0.3), 0 0 0 1px rgba(220, 60, 50, 0.2);
             overflow: hidden;
-            transition: all 0.2s;
         }
 
-        /* cabeçalho com nome do colégio (vermelho/preto) */
+        /* cabeçalho com SUPERMAN */
         .school-header {
             background: linear-gradient(135deg, #1f0303 0%, #2a0808 100%);
             padding: 2rem 2rem 1.5rem;
@@ -42,39 +40,42 @@
             border-bottom: 3px solid #b12a2a;
         }
 
+        .superman-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .super-emoji {
+            font-size: 3.5rem;
+            filter: drop-shadow(0 0 8px #e63946);
+            animation: pulse 1.8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); text-shadow: 0 0 10px #ff5555; }
+        }
+
         .school-name {
             font-size: 2.2rem;
             font-weight: 800;
-            letter-spacing: -0.3px;
             background: linear-gradient(135deg, #ffc9c9, #ff6a6a);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            text-shadow: 0 0 8px rgba(220, 40, 40, 0.4);
         }
 
         .school-sub {
             font-size: 1rem;
             color: #f0aaaa;
             margin-top: 0.5rem;
-            font-weight: 500;
-            letter-spacing: 1px;
         }
 
-        .location-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #2e0c0c;
-            padding: 0.3rem 1.2rem;
-            border-radius: 40px;
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            color: #ffb4b4;
-            border: 1px solid #9c2e2e;
-        }
-
-        /* area hero: SOBRE MIM + imagem simbólica (preto/vermelho) */
+        /* SEÇÃO SOBRE MIM */
         .hero-section {
             display: flex;
             flex-wrap: wrap;
@@ -90,12 +91,6 @@
             padding: 2rem;
             border: 1px solid #8f2c2c;
             box-shadow: 0 10px 20px -5px rgba(180, 0, 0, 0.25);
-            transition: transform 0.2s;
-        }
-
-        .about-card:hover {
-            border-color: #d14545;
-            box-shadow: 0 0 12px rgba(210, 50, 50, 0.3);
         }
 
         .greeting {
@@ -119,12 +114,6 @@
 
         .about-text strong {
             color: #ff7b7b;
-            font-weight: 700;
-        }
-
-        .highlight-red {
-            color: #ff9f6e;
-            font-weight: 500;
         }
 
         .decorative-area {
@@ -132,7 +121,6 @@
             min-width: 190px;
             background: #170404b3;
             border-radius: 1.8rem;
-            backdrop-filter: blur(2px);
             border: 1px solid #ac3a3a;
             display: flex;
             align-items: center;
@@ -142,7 +130,6 @@
 
         .code-symbol {
             text-align: center;
-            font-family: 'Fira Code', monospace;
             background: #1f0808;
             padding: 1.2rem;
             border-radius: 1.5rem;
@@ -160,29 +147,29 @@
             border: 1px solid #9b3a3a;
         }
 
-        /* botão temático principal (portfólio) */
-        .button-wrapper {
+        /* BOTÕES LADO A LADO: PORTFÓLIO + LINKEDIN */
+        .buttons-wrapper {
             display: flex;
             justify-content: center;
-            padding: 0.5rem 2rem 2rem;
+            gap: 1.5rem;
+            padding: 0.5rem 2rem 1.5rem;
+            flex-wrap: wrap;
         }
 
         .thematic-btn {
             background: linear-gradient(95deg, #2a0a0a, #120101);
             border: 2px solid #e03a3a;
             color: #fff0f0;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: bold;
-            padding: 1rem 2.6rem;
+            padding: 0.9rem 2rem;
             border-radius: 60px;
             cursor: pointer;
             transition: all 0.2s ease;
-            box-shadow: 0 8px 0 #4f0e0e;
-            letter-spacing: 1.5px;
+            box-shadow: 0 6px 0 #4f0e0e;
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            backdrop-filter: blur(8px);
             font-family: inherit;
         }
 
@@ -190,31 +177,41 @@
             transform: translateY(-2px);
             background: linear-gradient(95deg, #3f1313, #1c0303);
             border-color: #ff6b6b;
-            box-shadow: 0 12px 0 #6b1515;
-            color: white;
-            text-shadow: 0 0 4px #ff8888;
+            box-shadow: 0 10px 0 #6b1515;
         }
 
         .thematic-btn:active {
-            transform: translateY(5px);
-            box-shadow: 0 5px 0 #4f0e0e;
+            transform: translateY(3px);
+            box-shadow: 0 4px 0 #4f0e0e;
         }
 
-        /* seção cursos no estilo da imagem (mas cores vermelho/preto) */
+        .linkedin-btn {
+            border-color: #0077b5;
+            box-shadow: 0 6px 0 #0a5a7a;
+            background: linear-gradient(95deg, #0a2a3a, #05161f);
+        }
+
+        .linkedin-btn:hover {
+            border-color: #33aaff;
+            background: linear-gradient(95deg, #0e3a4e, #07212e);
+            box-shadow: 0 10px 0 #0e6a8f;
+        }
+
+        /* SEÇÃO CURSOS */
         .courses-wrapper {
-            padding: 1rem 2rem 2rem;
+            padding: 1rem 2rem 1.5rem;
         }
 
         .section-title {
             font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 1.8rem;
             text-align: center;
             border-bottom: 2px solid #b33;
             display: inline-block;
             width: auto;
             padding-bottom: 0.3rem;
             color: #ffc2c2;
+            margin-bottom: 1.8rem;
         }
 
         .courses-grid {
@@ -222,7 +219,6 @@
             flex-wrap: wrap;
             gap: 2rem;
             justify-content: center;
-            margin-top: 1rem;
         }
 
         .course-card {
@@ -231,16 +227,13 @@
             flex: 1;
             min-width: 280px;
             max-width: 380px;
-            backdrop-filter: blur(4px);
             border: 1px solid #aa3a3a;
-            transition: transform 0.2s, box-shadow 0.2s;
-            overflow: hidden;
+            transition: transform 0.2s;
         }
 
         .course-card:hover {
             transform: translateY(-6px);
             border-color: #e65c5c;
-            box-shadow: 0 20px 28px -12px rgba(200, 30, 30, 0.4);
         }
 
         .card-header {
@@ -256,38 +249,9 @@
             color: #ffb4b4;
         }
 
-        .institution-tag {
-            font-size: 0.7rem;
-            background: #2d1111;
-            display: inline-block;
-            padding: 0.2rem 0.9rem;
-            border-radius: 30px;
-            color: #ffa2a2;
-            font-weight: 600;
-            margin-top: 8px;
-        }
-
         .card-body {
             padding: 1.4rem;
             text-align: center;
-        }
-
-        .discount-badge {
-            background: #3e1515;
-            color: #ffb5b5;
-            font-weight: 800;
-            font-size: 1.1rem;
-            padding: 0.2rem 0.8rem;
-            border-radius: 50px;
-            display: inline-block;
-            margin-bottom: 0.8rem;
-        }
-
-        .price {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #ffa2a2;
-            margin: 0.5rem 0;
         }
 
         .course-info {
@@ -311,175 +275,304 @@
             display: inline-block;
             background: #7a2626;
             color: #ffefef;
-            text-decoration: none;
             font-weight: 600;
             padding: 0.7rem 1.2rem;
             border-radius: 40px;
-            transition: 0.2s;
-            font-size: 0.85rem;
             width: 100%;
             text-align: center;
-            border: none;
             cursor: pointer;
+            border: none;
         }
 
         .btn-course:hover {
             background: #a13c3c;
-            transform: scale(0.97);
+        }
+
+        /* SEÇÃO MAPA + INFORMAÇÕES DO COLÉGIO */
+        .info-section {
+            padding: 1.5rem 2rem 2rem;
+            border-top: 1px solid #682c2c;
+            margin-top: 0.5rem;
+        }
+
+        .info-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffb4b4;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .map-mini-container {
+            background: #1a0606;
+            border-radius: 1.5rem;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #b33;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .map-mini-container:hover {
+            background: #2a0c0c;
+            border-color: #e65c5c;
+            transform: scale(1.01);
+        }
+
+        .mini-map-preview {
+            background: #2d1212;
+            border-radius: 1rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .map-placeholder {
+            background: #3b1a1a;
+            width: 100%;
+            max-width: 300px;
+            height: 100px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #ffaaaa;
+            margin: 0 auto;
+        }
+
+        .click-hint {
+            font-size: 0.8rem;
+            color: #ff9f6e;
+            background: #2e0c0c;
+            padding: 5px 12px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .endereco-box {
+            background: #1f0808;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #e63946;
+        }
+
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-card, .hours-card {
+            flex: 1;
+            min-width: 240px;
+            background: #110202b3;
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            border: 1px solid #8b3a3a;
+        }
+
+        .contact-card h4, .hours-card h4 {
+            color: #ffa2a2;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #5a2a2a;
+            font-size: 0.9rem;
+        }
+
+        .hours-list li span:first-child {
+            font-weight: 600;
+            color: #ffc2c2;
+        }
+
+        .hours-list li.fechado {
+            color: #ff8888;
+        }
+
+        .phone-number {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffb4b4;
+            background: #2a0c0c;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            margin-top: 0.5rem;
         }
 
         .footer-note {
             text-align: center;
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-top: 1px solid #682c2c;
-            margin-top: 1rem;
             font-size: 0.75rem;
             color: #bf8989;
         }
 
-        @media (max-width: 780px) {
-            .school-name {
-                font-size: 1.6rem;
-            }
-            .greeting {
-                font-size: 1.6rem;
-            }
-            .hero-section {
-                padding: 1.2rem;
-            }
-            .courses-wrapper {
-                padding: 1rem;
-            }
-            .thematic-btn {
-                font-size: 1rem;
-                padding: 0.8rem 1.8rem;
-            }
-        }
-
-        @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(12px);}
-            100% { opacity: 1; transform: translateY(0);}
-        }
-
-        .main-container, .school-header, .about-card, .decorative-area, .button-wrapper, .courses-wrapper {
-            animation: fadeUp 0.5s ease-out forwards;
+        @media (max-width: 700px) {
+            .school-name { font-size: 1.5rem; }
+            .greeting { font-size: 1.5rem; }
+            .thematic-btn { font-size: 1rem; padding: 0.7rem 1.2rem; }
+            .buttons-wrapper { gap: 1rem; }
         }
     </style>
 </head>
 <body>
 <div class="main-container">
-    <!-- Cabeçalho com colegio estadual unidade polo (formal e destaque) -->
+    <!-- CABEÇALHO COM EMOJI DO SUPERMAN -->
     <div class="school-header">
+        <div class="superman-area">
+            <div class="super-emoji">🦸‍♂️</div>
+            <div class="super-emoji">🔴</div>
+            <div class="super-emoji">⭐</div>
+        </div>
         <div class="school-name">🏫 COLÉGIO ESTADUAL UNIDADE POLO</div>
         <div class="school-sub">Ensino Médio + Curso Técnico · Formação de Excelência</div>
-        <div class="location-badge">
-            ⚡ Polo de Inovação · Arapongas - PR
-        </div>
     </div>
 
-    <!-- SEÇÃO SOBRE MIM (exatamente o texto formal que o usuário enviou) -->
+    <!-- SOBRE MIM -->
     <div class="hero-section">
         <div class="about-card">
             <div class="greeting">〢 Sobre mim 〢</div>
             <div class="about-text">
                 <p>Oi.. meu nome é <strong>Eudson Felipe</strong>, tenho 16 anos e no momento desse portfólio estou cursando o ensino médio agregado com o curso técnico. Os meus gostos são: criação de jogos, gosto de séries, gosto também de me aprofundar em códigos de jogos. Meu ensino profissional está na base de Python, JavaScript, HTML, mas o meu conhecimento é básico.</p>
-                <p style="margin-top: 1rem; font-style: italic; border-left: 3px solid #e63946; padding-left: 1rem;">
-                🎮 “Apaixonado por tecnologia e sempre em busca de novos desafios no desenvolvimento de jogos e sistemas.”
-                </p>
+                <p style="margin-top: 1rem; font-style: italic; border-left: 3px solid #e63946; padding-left: 1rem;">🎮 “Apaixonado por tecnologia e sempre em busca de novos desafios.”</p>
             </div>
         </div>
         <div class="decorative-area">
             <div class="code-symbol">
                 <div style="margin-bottom: 12px; font-weight: 600; color:#ffaeae;">⚙️ stacks & interesses</div>
-                <div>
-                    <span>🐍 Python</span>
-                    <span>📜 JavaScript</span>
-                    <span>🌐 HTML</span>
-                    <span>🎮 Game Dev</span>
-                    <span>📺 Séries</span>
-                    <span>🧠 Lógica</span>
-                </div>
-                <div style="margin-top: 10px; font-size:0.75rem; color:#dba5a5;">#criaçãoDeJogos #código</div>
+                <div><span>🐍 Python</span><span>📜 JavaScript</span><span>🌐 HTML</span></div>
+                <div><span>🎮 Game Dev</span><span>📺 Séries</span><span>🧠 Lógica</span></div>
             </div>
         </div>
     </div>
 
-    <!-- BOTÃO TEMÁTICO PARA O PORTFÓLIO (link fornecido) -->
-    <div class="button-wrapper">
+    <!-- DOIS BOTÕES: PORTFÓLIO + LINKEDIN (lado a lado) -->
+    <div class="buttons-wrapper">
         <button class="thematic-btn" id="goToPortfolioBtn">
-            <span>🔗</span> ACESSAR PORTFÓLIO COMPLETO
+            <span>🔗</span> MEU PORTFÓLIO
             <span>🚀</span>
+        </button>
+        <button class="thematic-btn linkedin-btn" id="goToLinkedinBtn">
+            <span>💼</span> ACESSE O MEU LINKEDIN
+            <span>🔗</span>
         </button>
     </div>
 
-    <!-- SEÇÃO CURSOS: análise e desenvolvimento de sistemas e IA (igual ao layout solicitado) -->
+    <!-- CURSOS: ADS e IA -->
     <div class="courses-wrapper">
         <div style="text-align: center;">
             <div class="section-title">🎓 Cursos técnicos integrados</div>
         </div>
         <div class="courses-grid">
-            <!-- Curso: Análise e Desenvolvimento de Sistemas -->
             <div class="course-card">
                 <div class="card-header">
                     <div class="institution-name">💻 ADS</div>
-                    <div class="institution-tag">TÉCNICO EM ANÁLISE DE SISTEMAS</div>
-                    <div style="font-size:0.7rem; color:#e6a5a5; margin-top: 6px;">3 anos · Matutino/Vespertino</div>
+                    <div class="institution-tag" style="font-size:0.7rem; color:#ffa2a2;">TÉCNICO EM ANÁLISE DE SISTEMAS</div>
                 </div>
                 <div class="card-body">
-                    <div class="discount-badge">🔰 MERCADO EM ALTA</div>
-                    <div class="price">FORMAÇÃO COMPLETA + CERTIFICAÇÕES</div>
                     <div class="course-info">
                         <p>✅ <strong>Análise e Desenvolvimento de Sistemas</strong></p>
                         <p>📌 Programação Web (JS, Python, HTML/CSS)</p>
                         <p>📌 Banco de Dados, Engenharia de Software</p>
-                        <p>📌 Projetos integradores e metodologias ágeis</p>
-                        <p>🎓 <span style="color:#ffa07a;">Ensino Médio + Técnico em ADS</span></p>
                     </div>
                     <button class="btn-course" id="btnADS">📌 Ver matriz curricular »</button>
                 </div>
             </div>
-            <!-- Curso: Inteligência Artificial -->
             <div class="course-card">
                 <div class="card-header">
                     <div class="institution-name">🧠 IA</div>
-                    <div class="institution-tag">INTELIGÊNCIA ARTIFICIAL</div>
-                    <div style="font-size:0.7rem; color:#e6a5a5; margin-top: 6px;">Machine Learning · 3 anos</div>
+                    <div class="institution-tag" style="font-size:0.7rem; color:#ffa2a2;">INTELIGÊNCIA ARTIFICIAL</div>
                 </div>
                 <div class="card-body">
-                    <div class="discount-badge">⚡ TECNOLOGIA APLICADA</div>
-                    <div class="price">NÚCLEO DE EXCELÊNCIA EM IA</div>
                     <div class="course-info">
                         <p>✅ <strong>Inteligência Artificial (IA)</strong></p>
-                        <p>📌 Fundamentos de Machine Learning e Redes Neurais</p>
-                        <p>📌 Processamento de Linguagem Natural (NLP)</p>
-                        <p>📌 Visão computacional e ética em IA</p>
-                        <p>🎓 <span style="color:#ffa07a;">Certificação Técnica em IA</span></p>
+                        <p>📌 Machine Learning, Redes Neurais</p>
+                        <p>📌 Processamento de Linguagem Natural</p>
                     </div>
                     <button class="btn-course" id="btnIA">📌 Explorar grade IA »</button>
                 </div>
             </div>
         </div>
-        <!-- Diferenciais adicionais com tema vermelho/preto -->
-        <div style="background: #190707b3; border-radius: 2rem; padding: 1rem; margin: 2rem 0 0.5rem; text-align: center; border: 1px solid #bc4a4a;">
-            <p style="font-weight: 600; color: #ffbaba;">🔥 Diferenciais do Colégio Estadual Unidade Polo 🔥</p>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 0.6rem;">
-                <span style="background:#2f1313; padding: 4px 12px; border-radius: 30px;">✅ Laboratórios avançados</span>
-                <span style="background:#2f1313; padding: 4px 12px; border-radius: 30px;">✅ Parcerias tech</span>
-                <span style="background:#2f1313; padding: 4px 12px; border-radius: 30px;">✅ Projetos de iniciação científica</span>
-                <span style="background:#2f1313; padding: 4px 12px; border-radius: 30px;">✅ Preparatório para o mercado</span>
+    </div>
+
+    <!-- SEÇÃO MAPA + ENDEREÇO + HORÁRIOS -->
+    <div class="info-section">
+        <div class="info-title">
+            <span>📍</span> LOCALIZAÇÃO E ATENDIMENTO
+            <span>🦸‍♂️</span>
+        </div>
+
+        <!-- MINI MAPA CLICÁVEL -->
+        <div class="map-mini-container" id="mapClickable">
+            <div class="mini-map-preview">
+                <div class="map-placeholder">
+                    <span>📍</span> Clique aqui para ir para o local exato
+                    <span>🔍</span>
+                </div>
+                <div class="click-hint">🔽 C lique na área acima para ampliar o mapa🔽</div>
+            </div>
+        </div>
+
+        <!-- ENDEREÇO COMPLETO -->
+        <div class="endereco-box">
+            <p style="font-weight: bold; color: #ffb4b4; margin-bottom: 6px;">📌 Endereço oficial:</p>
+            <p style="font-size: 1.05rem;">R. Pavão, 831 - Centro, Arapongas - PR, 86700-215</p>
+            <p style="font-size: 0.85rem; color: #dba5a5; margin-top: 5px;">🔹 Colégio Estadual Unidade Polo</p>
+        </div>
+
+        <!-- INFORMAÇÕES DE CONTATO E HORÁRIOS -->
+        <div class="info-grid">
+            <div class="contact-card">
+                <h4>📞 Contato</h4>
+                <div class="phone-number">(43) 3274-4471</div>
+                <p style="margin-top: 10px; font-size: 0.8rem;">📧 contato@colegiopolo.pr.edu.br</p>
+            </div>
+            <div class="hours-card">
+                <h4>🕘 Horário de funcionamento</h4>
+                <ul class="hours-list">
+                    <li><span>segunda-feira</span> <span>07:30–11:30, 13:00–17:00</span></li>
+                    <li><span>terça-feira</span> <span>07:30–11:30, 13:00–17:00</span></li>
+                    <li><span>quarta-feira</span> <span>07:30–11:30, 13:00–17:00</span></li>
+                    <li><span>quinta-feira</span> <span>07:30–11:30, 13:00–17:00</span></li>
+                    <li><span>sexta-feira</span> <span>07:30–11:30, 13:00–17:00</span></li>
+                    <li class="fechado"><span>sábado</span> <span>Fechado</span></li>
+                    <li class="fechado"><span>domingo</span> <span>Fechado</span></li>
+                </ul>
             </div>
         </div>
     </div>
 
     <div class="footer-note">
         <span>© Eudson Felipe · Colégio Estadual Unidade Polo · Ensino Médio + Técnico</span>
-        <span style="margin:0 8px">|</span>
-        <span>📧 @colegiopolo.pr.gov.br</span>
     </div>
 </div>
 
 <script>
-    // Botão principal do PORTFOLIO -> link exato do enunciado
+    // Botão do portfólio (link original)
     const portfolioBtn = document.getElementById('goToPortfolioBtn');
     const portfolioUrl = "https://eudsonj.github.io/portifolio/portifolio.html";
     if (portfolioBtn) {
@@ -489,21 +582,35 @@
         });
     }
 
-    // Interação dos cards de cursos (apenas demonstração formal)
-    const btnADS = document.getElementById('btnADS');
-    const btnIAcard = document.getElementById('btnIA');
-    
-    if (btnADS) {
-        btnADS.addEventListener('click', (e) => {
+    // Botão do LinkedIn (link fornecido: https://www.linkedin.com/jobs/)
+    const linkedinBtn = document.getElementById('goToLinkedinBtn');
+    const linkedinUrl = "https://www.linkedin.com/jobs/";
+    if (linkedinBtn) {
+        linkedinBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            alert("📘 Curso Técnico em Análise e Desenvolvimento de Sistemas (integrado ao Ensino Médio).\nMatriz curricular disponível na secretaria do Colégio Estadual Unidade Polo.");
+            window.open(linkedinUrl, "_blank", "noopener,noreferrer");
         });
     }
-    if (btnIAcard) {
-        btnIAcard.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert("🧠 Curso Técnico em Inteligência Artificial (IA).\nGrade: Python para IA, Machine Learning, Redes Neurais, Ética e Projetos práticos.");
+
+    // MAPA CLICÁVEL: abre Google Maps com o endereço exato do colégio
+    const mapContainer = document.getElementById('mapClickable');
+    const enderecoCompleto = "R. Pavão, 831 - Centro, Arapongas - PR, 86700-215";
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(enderecoCompleto)}`;
+    
+    if (mapContainer) {
+        mapContainer.addEventListener('click', () => {
+            window.open(mapsUrl, "_blank", "noopener,noreferrer");
         });
+    }
+
+    // Botões dos cursos (informativos)
+    const btnADS = document.getElementById('btnADS');
+    const btnIA = document.getElementById('btnIA');
+    if (btnADS) {
+        btnADS.addEventListener('click', () => alert("📘 Curso Técnico em Análise e Desenvolvimento de Sistemas (integrado ao Ensino Médio). Matriz disponível na secretaria."));
+    }
+    if (btnIA) {
+        btnIA.addEventListener('click', () => alert("🧠 Curso Técnico em Inteligência Artificial (IA). Grade: Python, Machine Learning, Redes Neurais e Ética."));
     }
 </script>
 </body>
